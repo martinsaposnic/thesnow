@@ -49,9 +49,6 @@ export function Gallery() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mt-16"
         >
-          <p className="text-foreground/50 text-sm">
-            More artwork coming soon...
-          </p>
         </motion.div>
       </div>
     </section>

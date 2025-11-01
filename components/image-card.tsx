@@ -50,11 +50,13 @@ export function ImageCard({ artwork, index }: ImageCardProps) {
           
           {/* Blur Overlay - This protects the image until purchased */}
           {!artwork.isPurchased && (
-            <div className="absolute inset-0 backdrop-blur-xl bg-background/30 flex items-center justify-center">
+            <div className="absolute inset-0 backdrop-blur-2xl bg-background/50 flex items-center justify-center z-10">
+              {/* Additional blur layer for stronger protection */}
+              <div className="absolute inset-0 backdrop-blur-2xl bg-background/40"></div>
               <motion.div
                 animate={{ scale: isHovered ? 1.1 : 1 }}
                 transition={{ duration: 0.3 }}
-                className="text-center"
+                className="text-center relative z-20"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
